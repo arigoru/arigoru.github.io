@@ -1,0 +1,310 @@
+@import url(https://fonts.googleapis.com/css?family=Raleway:400);
+html,
+body {
+  --bg-color: hsl(0, 0%, 16%);
+  --navbar-bg-color: hsl(180, 10%, 56%);
+  --main-bg-color: hsl(180, 10%, 56%);
+  --welcome-bg-color: hsl(0, 0%, 32%);
+  --about-bg-color: hsl(55, 0%, 16%);
+  --skills-bg-color: hsl(115, 0%, 16%);
+  --projects-bg-color: hsl(145, 0%, 32%);
+  --contacts-bg-color: hsl(195, 0%, 16%);
+  --footer-bg-color: hsl(235, 0%, 32%);
+  --nav-bar-height: 50px;
+  --nav-but-bg: hsl(180, 50%, 24%);
+  --nav-but-bg-ani: hsl(180, 50%, 34%);
+  --nav-but-color: hsl(245, 0%, 90%);
+  /*--main-text-color: hsl(143,14%,83%);*/
+  --main-text-color: hsl(180, 15%, 15%);
+  --section-bg: hsl(180, 35%, 90%);
+  --border-color: hsl(180, 35%, 10%);
+  --project-info-bg: hsl(180, 35%, 70%);
+  --project-link-bg: hsl(180, 35%, 60%);
+  --sections-width: 60%;
+  /*   font-family: "Raleway", Helvetica, sans-serif; */
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  text-align: center;
+  color: var(--main-text-color);
+  scroll-behavior: smooth;
+}
+.navbar {
+  background: var(--navbar-bg-color);
+  font-size: 24px;
+  position: fixed;
+  display: flex;
+  flex-flow: row nowrap;
+  justify-content: center;
+  align-items: center;
+  top: 0;
+  width: 100%;
+  height: var(--nav-bar-height);
+  z-index: 10;
+  border-bottom: 5px solid hsl(180, 35%, 10%);
+}
+.navbar a {
+  text-decoration: none;
+  margin: 5px 5px 5px 5px;
+  padding: 5px 10px 5px 10px;
+  background: var(--nav-but-bg);
+  color: var(--nav-but-color);
+  animation-name: nav-a-norm;
+  animation-duration: 500ms;
+  animation-fill-mode: backwards;
+  border-radius: 10px;
+}
+.navbar a:hover {
+  animation-name: nav-a-hover;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes nav-a-norm {
+  0% {
+    background-color: var(--nav-but-bg-ani);
+  }
+}
+@keyframes nav-a-hover {
+  100% {
+    background-color: var(--nav-but-bg-ani);
+  }
+}
+
+#main {
+  background: var(--bg-color);
+  display: flex;
+  min-width: 250px;
+  width: 100%;
+  flex-flow: column nowrap;
+  flex-grow: 100%;
+  font-size: 24px;
+  font-size: 24px;
+  /*margin-top: 80px;*/
+}
+
+.section-in {
+  width: var(--sections-width);
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  margin: 15px 10% 15px 10%;
+  background: var(--section-bg);
+  overflow: auto;
+  align-items: center;
+  border: 5px solid var(--border-color);
+  /* max-width: 800px; */
+  border-radius: 15px;
+  padding-bottom: 15px;
+}
+
+.section-in h1,
+h2 {
+  border-bottom: 5px solid hsl(180, 25%, 20%);
+  width: 90%;
+  margin-bottom: 15px;
+}
+
+.section-in p {
+  text-align: left;
+  margin: 0px 35px 10px 35px;
+}
+
+.section-in h3 {
+  text-align: left;
+  margin: 0px 25px 0px 25px;
+}
+
+.section-in-2 {
+  width: 80%;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: start;
+  margin: 0px 10% 0px 10%;
+  overflow: none;
+  align-items: stretch;
+  border: 5px none hsl(180, 35%, 10%);
+}
+
+.section-in-2 ul {
+  margin: 5px 0px 5px 0px;
+}
+
+.section-in-2 li {
+  text-align: left;
+  margin: 0px 0px 0px 25px;
+  list-style: disc;
+}
+
+#welcome-section {
+  background: var(--navbar-bg-color);
+  /*  min-height: calc(100vh - var(--nav-bar-height));*/
+  padding-top: var(--nav-bar-height);
+  /*  height: calc(100vh - var(--nav-bar-height));*/
+  z-index: 9;
+  display: flex;
+  justify-content: center;
+}
+/* #main p{
+  background:red;
+}*/
+
+#about_me {
+  background: var(--about-bg-color);
+  /*height: 100vh;*/
+  z-index: 8;
+}
+#skills {
+  background: var(--main-bg-color);
+  padding-top: var(--nav-bar-height);
+  margin-top: calc(-1 * var(--nav-bar-height));
+  /*height: calc(100vh - var(--nav-bar-height));*/
+  z-index: 7;
+  display: flex;
+  justify-content: center;
+}
+#projects {
+  background: var(
+    --navbar-bg-color
+  ); /*
+height: calc(100vh - var(--nav-bar-height));*/
+  z-index: 6;
+  padding-top: var(--nav-bar-height);
+  margin-top: calc(-1 * var(--nav-bar-height));
+  display: flex;
+  justify-content: center;
+}
+#contacts {
+  z-index: 5;
+  background: var(--main-bg-color);
+  padding-top: var(--nav-bar-height);
+  margin-top: calc(-1 * var(--nav-bar-height));
+  display: flex;
+  justify-content: center;
+}
+#todo {
+  background: var(
+    --navbar-bg-color
+  ); /*
+height: calc(100vh - var(--nav-bar-height));*/
+  z-index: 4;
+  padding-top: var(--nav-bar-height);
+  margin-top: calc(-1 * var(--nav-bar-height));
+  display: flex;
+  justify-content: center;
+}
+
+.contact-icons {
+  padding-bottom: 0px;
+  display: flex;
+  flex-flow: row wrap;
+}
+.contact-icons a {
+  padding: 0px 15px 15px 15px;
+  color: var(--main-text-color);
+  text-decoration: none;
+  animation-name: cont-a-norm;
+  animation-duration: 500ms;
+  animation-fill-mode: backwards;
+}
+
+.contact-icons a:hover {
+  /*color: hsl(0,50%,50%);*/
+  animation-name: cont-a-hover;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
+
+@keyframes cont-a-norm {
+  0% {
+    color: hsl(0, 60%, 50%);
+  }
+}
+@keyframes cont-a-hover {
+  100% {
+    color: hsl(0, 60%, 50%);
+  }
+}
+
+#footer {
+  background: var(--bg-color);
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  z-index: 4;
+  color: hsl(0, 0%, 70%);
+}
+#footer a {
+  color: hsl(0, 0%, 90%);
+}
+
+@media (max-width: 310px) {
+  html,
+  body {
+    --nav-bar-height: 150px;
+  }
+  .navbar {
+    flex-flow: column nowrap;
+  }
+}
+
+@media (max-width: 600px) {
+  .section-in {
+    width: 100%;
+    margin: 5px 0% 5px 0%;
+  }
+}
+
+.project-tile {
+  background: hsl(0, 50%, 50%);
+  width: 90%;
+  display: grid;
+  margin-top: 25px;
+  grid-template-columns: 50% 50%;
+  border: 2px solid var(--border-color);
+  border-radius: 5px;
+}
+.project-info {
+  background: var(--project-info-bg);
+  padding: 15px;
+}
+.project-info h3 {
+  margin: 0px;
+  padding: 0px;
+  text-align: center;
+}
+.project-info p {
+  margin: 5px;
+  padding: 0px;
+  text-align: left;
+}
+
+.project-link {
+  display: flex;
+  flex-flow: column nowrap;
+  padding: 15px;
+  background: var(--project-link-bg);
+  list-style-type: none;
+  align-content: space-evenly;
+  align-items: center;
+  text-align: left;
+}
+.project-link a {
+  text-decoration: none;
+  color: var(--main-text-color);
+  text-decoration: none;
+  animation-name: cont-a-norm;
+  animation-duration: 500ms;
+  animation-fill-mode: backwards;
+}
+
+.project-link ul {
+  /* list-style-type: none; */
+  /* margin: 0px; */
+}
+
+.project-link a:hover {
+  animation-name: cont-a-hover;
+  animation-duration: 500ms;
+  animation-fill-mode: forwards;
+}
