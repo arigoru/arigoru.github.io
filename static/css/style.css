@@ -16,10 +16,10 @@ body {
   --nav-but-color: hsl(245, 0%, 90%);
   /*--main-text-color: hsl(143,14%,83%);*/
   --main-text-color: hsl(180, 15%, 15%);
-  --section-bg: hsl(180, 35%, 90%);
+  --section-bg: hsl(180, 15%, 90%);
   --border-color: hsl(180, 35%, 10%);
-  --project-info-bg: hsl(180, 35%, 70%);
-  --project-link-bg: hsl(180, 35%, 60%);
+  --project-info-bg: hsl(180, 15%, 85%);
+  --project-link-bg: hsl(180, 15%, 80%);
   --sections-width: 60%;
   /*   font-family: "Raleway", Helvetica, sans-serif; */
   width: 100%;
