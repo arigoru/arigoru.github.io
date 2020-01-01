@@ -28,6 +28,7 @@ body {
   text-align: center;
   color: var(--main-text-color);
   scroll-behavior: smooth;
+  background: var(--bg-color);
 }
 .navbar {
   background: var(--navbar-bg-color);
